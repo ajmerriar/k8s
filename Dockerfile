@@ -23,12 +23,17 @@
 
 ## chatgpt docker file 
 
-FROM centos:latest
-RUN yum install -y httpd wget unzip
+# Use Ubuntu as the base image
+FROM ubuntu:latest
+
+RUN apt-get update && \
+    apt-get install -y apache2 wget unzip
+
 WORKDIR /var/www/html/
 RUN wget https://example.com/path/to/your/shine.zip
 RUN unzip shine.zip
 RUN cp -rvf shine/* .
 RUN rm -rf shine shine.zip
-CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 EXPOSE 80
