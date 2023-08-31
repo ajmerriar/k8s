@@ -30,7 +30,7 @@ RUN apt-get update && \
     apt-get install -y apache2 wget unzip
 
 WORKDIR /var/www/html/
-RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page265/shine.zip /var/www/html/
+RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page265/shine.zip
 RUN unzip shine.zip
 RUN cp -rvf shine/* .
 RUN rm -rf shine shine.zip
