@@ -1,40 +1,41 @@
-# kind: Deployment
-# apiVersion: apps/v1
-# metadata:
-#    name: Ajmer_app
-# spec:
-#    replicas: 2
-#    selector:      # tells the controller which pods to watch/belong to
-#     matchLabels:
-#      app: Ajmer_app
-#    template:
-#       metadata:
-#         labels:
-#           app: Ajmer_app
-#       spec:
-#        containers:
-#         - name: Ajmer_app
-#           image: ajmer1705/first_project
-#           imagePullPolicy: Always
-#           ports:
-#           - containerPort: 80
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-   name: mrdevops
+   name: Ajmer_app
 spec:
    replicas: 2
    selector:      # tells the controller which pods to watch/belong to
     matchLabels:
-     app: mrdevops
+     app: Ajmer_app
    template:
       metadata:
         labels:
-          app: mrdevops
+          app: Ajmer_app
       spec:
        containers:
-        - name: mrdevops
+        - name: Ajmer_app
           image: ajmer1705/first_project
           imagePullPolicy: Always
           ports:
           - containerPort: 80
+
+# kind: Deployment
+# apiVersion: apps/v1
+# metadata:
+#    name: mrdevops
+# spec:
+#    replicas: 2
+#    selector:      # tells the controller which pods to watch/belong to
+#     matchLabels:
+#      app: mrdevops
+#    template:
+#       metadata:
+#         labels:
+#           app: mrdevops
+#       spec:
+#        containers:
+#         - name: mrdevops
+#           image: ajmer1705/first_project
+#           imagePullPolicy: Always
+#           ports:
+#           - containerPort: 80
