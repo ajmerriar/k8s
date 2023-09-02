@@ -14,7 +14,7 @@ spec:
       spec:
        containers:
         - name: Ajmer_app
-          image: ajmer1705/demo
+          image: ajmer1705/first_project
           imagePullPolicy: Always
           ports:
           - containerPort: 80
