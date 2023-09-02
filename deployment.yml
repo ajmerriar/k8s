@@ -1,19 +1,19 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-   name: Ajmer_app
+   name: ajmerapp
 spec:
    replicas: 2
    selector:      # tells the controller which pods to watch/belong to
     matchLabels:
-     app: Ajmer_app
+     app: ajmerapp
    template:
       metadata:
         labels:
-          app: Ajmer_app
+          app: ajmerapp
       spec:
        containers:
-        - name: Ajmer_app
+        - name: ajmerapp
           image: ajmer1705/first_project
           imagePullPolicy: Always
           ports:
