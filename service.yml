@@ -1,14 +1,28 @@
+# kind: Service                             
+# apiVersion: v1
+# metadata:
+#   name: Ajmer_app
+#   labels:
+#     app: Ajmer_app
+# spec:
+#   ports:
+#     - port: 8080                               
+#       targetPort: 80                    
+#       nodePort: 31200
+#   selector:
+#     app: Ajmer_app                    
+#   type: LoadBalancer                   
 kind: Service                             
 apiVersion: v1
 metadata:
-  name: Ajmer_app
+  name: mrdevops
   labels:
-    app: Ajmer_app
+    app: mrdevops
 spec:
   ports:
     - port: 8080                               
       targetPort: 80                    
       nodePort: 31200
   selector:
-    app: Ajmer_app                    
+    app: mrdevops                    
   type: LoadBalancer                   
